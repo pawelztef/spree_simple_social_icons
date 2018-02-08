@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spree Social Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spree_social_links.each do |spree_social_link| %>
+      <tr>
+        <td><%= link_to 'Show', spree_social_link %></td>
+        <td><%= link_to 'Edit', edit_spree_social_link_path(spree_social_link) %></td>
+        <td><%= link_to 'Destroy', spree_social_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spree Social Link', new_spree_social_link_path %>
