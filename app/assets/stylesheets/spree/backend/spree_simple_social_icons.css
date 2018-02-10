@@ -1,4 +1,17 @@
-/*
-Placeholder manifest file.
-the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/backend/all.css'
-*/
+input#social_link_icon_image {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+label[for="social_link_icon_image"] {
+  font-size: 13px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+label[for="social_link_icon_image"]:focus, label[for="social_link_icon_image"]:hover {
+}
+label[for="social_link_icon_image"]:focus {
+}
