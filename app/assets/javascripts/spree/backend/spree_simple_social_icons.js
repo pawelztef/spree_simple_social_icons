@@ -10,7 +10,8 @@ $(document).ready(function(){
 
   file_input.on('change', function(e) {
     e.preventDefault();
-    if((file_input.val().length !== 0)&&(url_input.val().length !== 0)) {
+    if(file_input.val().length !== 0) {
+      console.log('hi');
       var file_input_ext = $('#social_link_icon_image').val().split('\.').pop();
         label.html('<i class="glyphicon glyphicon-save"></i>' + file_input.val().split('\\').pop());
         $('[type="submit"]').removeAttr('disabled');
@@ -22,8 +23,6 @@ $(document).ready(function(){
       $('[type="submit"]').removeAttr('disabled');
     }
   });
-
-  $('[data-toggle="popover"]').popover();
 
   reset_button.on('click', function(e) {
     e.preventDefault();
