@@ -1,12 +1,14 @@
 <% content_for :page_title do %>
   <%= Spree.t(:social_links) %>
+  <%= build_links %>
 <% end %>
-
 <div class="row">
   <div class="col-md-12">
     <%= render "spree/shared/error_messages", :target => @spree_social_link %>
     <%= render "form" %>
-    <% if @spree_social_links %>
+    <% if @spree_social_links.empty? %>
+      <%= Spree.t(:no_resource_found) %>
+    <% else %>
       <table class="index table">
         <colgroup>
           <col style="width: 25%">
@@ -20,7 +22,6 @@
             <th class="text-right"><%= Spree.t('Actions') %></th>
           </tr>
         </thead>
-
         <tbody>
           <% @spree_social_links.each do |spree_social_link| %>
             <tr class="<%= cycle('odd', 'even') %>">
@@ -33,13 +34,6 @@
           <% end %>
         </tbody>
       </table>
-    <% else %>
-      <div class="alpha twelve columns no-objects-found">
-        <%= Spree.t(:no_resource_found) %>
-      </div>
     <% end %>
   </div>
 </div>
-
-
-

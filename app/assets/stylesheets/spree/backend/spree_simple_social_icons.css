@@ -19,3 +19,7 @@ label[for="social_link_icon_image"]:focus {
   margin-top: 20px;
   margin-bottom: 35px;
 }
+.social-links > img {
+  padding: 5px;
+  cursor: pointer;
+}
