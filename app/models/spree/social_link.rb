@@ -7,7 +7,7 @@ class Spree::SocialLink < ApplicationRecord
   validates :url, :format => URI::regexp(%w(http https))
   validates_attachment :icon_image, presence: true
   validates_attachment_content_type :icon_image, content_type: /\Aimage/
-  validates_attachment_file_name :icon_image, matches: [/png\z/, /jpe?g\z/]
+  validates_attachment_file_name :icon_image, matches: [/png\z/, /jpe?g\z/, /svg\z/]
   def self.get_links
     Spree::SocialLink.all
   end
