@@ -8,10 +8,11 @@ module Spree::SocialLinksHelper
   end
   def build_links
     links = Spree::SocialLink.get_links
+    h = ""
     if links.present?
       content_tag :div, class: 'social-links' do
         links.get_links.map do |link| 
-          concat(image_tag link.icon_image.url(:mid))
+          concat link_to(image_tag(link.icon_image.url(:mid)), link.url)
         end
       end
     end
