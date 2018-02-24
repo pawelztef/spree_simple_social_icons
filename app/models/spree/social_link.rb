@@ -1,5 +1,5 @@
 class Spree::SocialLink < ApplicationRecord
-  has_attached_file :icon_image, styles: {mini: '16x16#', mid: '24x24#', large: '32x32#'},
+  has_attached_file :icon_image, styles: {mini: '16x16', mid: '24x24', large: '32x32'},
     default_style: :mini, 
     url: "/assets/social_icons/:id/:style/:basename.:extension",
     path: ":rails_root/public/assets/social_icons/:id/:style/:basename.:extension"
