@@ -1,11 +1,11 @@
 <%= form_for [:admin, Spree::SocialLink.new ], html: {multipart: true, class: 'form-inline'} do |form| %>
   <div class="form-group">
     <%= form.label :icon_image, class: 'btn btn-default' do  %>
-      <i class="glyphicon glyphicon-save"></i>Choose File
+      <i class="glyphicon glyphicon-save"></i> <%= Spree.t(:choose_file) %>
     <% end %>
     <%= form.file_field :icon_image %>
     <%= form.text_field :url, class: 'form-control', placeholder: 'URL...'  %>
-    <button id='reset' class="btn btn-default">Reset</button>
-    <%= form.submit "submit",  disabled: true, class: 'btn btn-primary' %>
+    <button id='reset' class="btn btn-default"><%= Spree.t(:reset) %></button>
+    <%= form.submit Spree.t(:submit_link),  disabled: true, class: 'btn btn-primary' %>
   </div>
 <% end %>

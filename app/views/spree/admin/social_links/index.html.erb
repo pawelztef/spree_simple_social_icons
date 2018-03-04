@@ -6,7 +6,7 @@
     <%= render "spree/shared/error_messages", :target => @spree_social_link %>
     <%= render "form" %>
     <% if @spree_social_links.empty? %>
-      <%= Spree.t(:no_resource_found) %>
+      <%= Spree.t(:no_links) %>
     <% else %>
       <table class="index table">
         <colgroup>
