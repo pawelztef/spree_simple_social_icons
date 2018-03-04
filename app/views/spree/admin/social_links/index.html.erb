@@ -18,7 +18,7 @@
           <tr>
             <th class=""><%= Spree.t(:icon) %></th>
             <th class=""><%= Spree.t(:url) %></th>
-            <th class="text-right"><%= Spree.t('Actions') %></th>
+            <th class="text-right"><%= Spree.t(:action) %></th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
               <td class="align-center"><%= image_tag spree_social_link.icon_image.url(:mid) %></td>
               <td class="align-center"><%= spree_social_link.url %></td>
               <td class="text-right">
-                <%= link_to 'Destroy', admin_social_link_path(spree_social_link), method: :delete, class: 'btn btn-xs btn-default', data: { confirm: 'Are you sure?' } %>
+                <%= link_to Spree.t(:destroy), admin_social_link_path(spree_social_link), method: :delete, class: 'btn btn-xs btn-default', data: { confirm: 'Are you sure?' } %>
               </td>
             </tr>
           <% end %>
