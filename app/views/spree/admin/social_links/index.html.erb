@@ -10,9 +10,9 @@
     <% else %>
       <table class="index table">
         <colgroup>
-          <col style="width: 25%">
+          <col style="width: 30%">
           <col style="width: 55%">
-          <col style="width: 10%">
+          <col style="width: 5%">
         </colgroup>
         <thead>
           <tr>
@@ -26,7 +26,7 @@
             <tr class="<%= cycle('odd', 'even') %>">
               <td class="align-center"><%= image_tag spree_social_link.icon_image.url(:mid) %></td>
               <td class="align-center"><%= spree_social_link.url %></td>
-              <td class="text-right">
+              <td class="text-center">
                 <%= link_to Spree.t(:destroy), admin_social_link_path(spree_social_link), method: :delete, class: 'btn btn-xs btn-default', data: { confirm: 'Are you sure?' } %>
               </td>
             </tr>
