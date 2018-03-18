@@ -1,0 +1,5 @@
+pl:
+  spree:
+    submit_link: Dodaj link
+    reset: Resetuj
+    alt: Alt

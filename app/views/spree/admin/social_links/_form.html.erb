@@ -4,6 +4,7 @@
       <i class="glyphicon glyphicon-save"></i> <%= Spree.t(:choose_file) %>
     <% end %>
     <%= form.file_field :icon_image %>
+    <%= form.text_field :alt, class: 'form-control', placeholder: 'Alt...' %>
     <%= form.text_field :url, class: 'form-control', placeholder: 'URL...'  %>
     <button id='reset' class="btn btn-default"><%= Spree.t(:reset) %></button>
     <%= form.submit Spree.t(:submit_link),  disabled: true, class: 'btn btn-primary' %>

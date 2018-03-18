@@ -23,3 +23,12 @@ label[for="social_link_icon_image"]:focus {
   padding: 5px;
   cursor: pointer;
 }
+i.glyphicon.glyphicon-ban-circle {
+  margin-left: 20px;
+}
+i.glyphicon.glyphicon-ban-circle:hover {
+  color: inherit;
+}
+.soc-ico-back {
+  margin-left: 15px;  
+}

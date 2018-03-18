@@ -10,13 +10,15 @@
     <% else %>
       <table class="index table">
         <colgroup>
+          <col style="width: 10%">
           <col style="width: 30%">
-          <col style="width: 55%">
-          <col style="width: 5%">
+          <col style="width: 50%">
+          <col style="width: 10%">
         </colgroup>
         <thead>
           <tr>
             <th class=""><%= Spree.t(:icon) %></th>
+            <th class=""><%= Spree.t(:alt) %></th>
             <th class=""><%= Spree.t(:url) %></th>
             <th class="text-right"><%= Spree.t(:action) %></th>
           </tr>
@@ -24,7 +26,10 @@
         <tbody>
           <% @spree_social_links.each do |spree_social_link| %>
             <tr class="<%= cycle('odd', 'even') %>">
-              <td class="align-center"><%= image_tag spree_social_link.icon_image.url(:mid) %></td>
+              <td class="align-center"><%= if spree_social_link.icon_image.present? 
+                                             then image_tag spree_social_link.icon_image.url(:mid), class: 'soc-ico-back'
+                                           else "<i class='glyphicon glyphicon-ban-circle'></i>".html_safe end %></td>
+              <td class="align-center"><%= spree_social_link.alt %></td>
               <td class="align-center"><%= spree_social_link.url %></td>
               <td class="text-center">
                 <%= link_to Spree.t(:destroy), admin_social_link_path(spree_social_link), method: :delete, class: 'btn btn-xs btn-default', data: { confirm: 'Are you sure?' } %>

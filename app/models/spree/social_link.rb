@@ -5,7 +5,7 @@ class Spree::SocialLink < ApplicationRecord
     path: ":rails_root/public/assets/social_icons/:id/:style/:basename.:extension"
   validates_presence_of :url
   validates :url, :format => URI::regexp(%w(http https))
-  validates_attachment :icon_image, presence: true
+  # validates_attachment :icon_image, presence: true
   validates_attachment_content_type :icon_image, content_type: /\Aimage/
   validates_attachment_file_name :icon_image, matches: [/png\z/, /jpe?g\z/ ]
   def self.get_links
