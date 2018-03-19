@@ -11,7 +11,11 @@ module Spree::SocialLinksHelper
     if links.present?
       content_tag :div, class: 'social-links' do
         links.get_links.map do |link| 
+          if link.icon_image.present?
           concat link_to(image_tag(link.icon_image.url(:mid)), link.url)
+          else
+            concat link_to link.alt, link.url
+          end
         end
       end
     end
